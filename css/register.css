@@ -1,21 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap");
-
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .container {
     width: 1110px;
-    height: auto;
+    height: 90vh;
     margin: 0 auto;
-    background-color: #def8d6;
+    background-color: rgb(241, 251, 255);
 }
 
 .section {
     display: flex;
     justify-content: center;
     align-items: center;
-
     position: relative;
 }
 
-.container .close {
+.section .close {
     position: absolute;
     right: 10%;
     top: 19%;
@@ -23,14 +26,14 @@
     cursor: pointer;
 }
 
-.content {
+.section .content {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 7%;
+    margin-top: 3%;
 }
 
-.content span {
+.section .content span {
     font-family: "Sacramento", sans-serif;
     font-weight: normal;
     font-size: 4rem;
@@ -53,33 +56,38 @@
 } */
 
 .outh {
-    margin-left: 38%;
+    height: 50vh;
+    margin-left: 10%;
     background-color: rgba(0, 0, 0, 0.2);
-    width: 280px;
+    width: 70%;
     padding: 10px;
-    margin-bottom: 4rem;
+    /* margin-bottom: 4rem; */
+    text-align: center;
 }
 
 .outh input {
-    width: 70%;
+    width: 50%;
+    height: 30px;
     display: block;
-    margin: 7%;
-    border: 2px solid #6ab1d5;
+    margin: 10px;
+    /* border: 2px solid #6ab1d5; */
+    border: none;
     border-radius: 10px;
-    padding: 7px;
-    
-
+    text-align: center;
+    margin-left: 200px;
 }
 
 .outh button {
-    width: 76%;
-    margin-left: 7%;
-    border: 2px solid #6ab1d5;
+    width: 40%;
+    /* margin-left: 7%; */
+    /* border: 2px solid #6ab1d5; */
+    border: none;
     border-radius: 10px;
-    padding: 7px;
+    height: 30px;
     background-color: #6ab1d5;
     cursor: pointer;
-
+    padding: 5px ;
+    
 }
 
 .outh span {
@@ -98,29 +106,48 @@
 }
 
 @media (max-width: 768px){
-    .container{
-        font-size: 2rem;
-    }
-    span{
-        font-size: 5rem;
-    }
-    .outh{
-        width: 500px;
-        margin-left: 30%;
-        font-size: 2rem;
-    }
+    .container {
+            width: 100%;
+            margin: 0;
+        }
+    
+        .outh {
+            width: 100%;
+            margin: 0;
+            font-size: 1rem;
+            padding: 30px;
+        }
+    
+        .outh input {
+            margin-left: 160px;
+            width: 60%;
+        }
+    
+        #authSwitch {
+            padding-top: 70px;
+        }
 
 }
 
 @media (max-width: 376px){
     .container{
-        width: 28rem;
+        width: 100%;
         margin: 0;
     }
-
+    span{
+        padding: 0;
+    }
     .outh{
-        margin-left: 5%;
+        width: 100%;
+        margin: 0;
         font-size: 1rem;
-        margin-left: 16%;
+        
+    }
+    .outh input{
+        margin: 20px;
+        width: 80%;
+    }
+    #authSwitch{
+        padding-top: 50px;
     }
 }

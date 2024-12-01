@@ -5,72 +5,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nasiye</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/first.css">
 </head>
 
 <body>
-    <div class="holder" id="holder">
-        <div class="nav">
-            <div class="brands">
-                <!-- <img src="./src/logo.png" alt=""> -->
-                <span id="brand">Nasiye</span>
-            </div>
-            <form>
-                <div class="search" id="search">
-                    <span><i class="bi bi-search"></i></span>
-                    <input type="search" placeholder="Search">
-                </div>
-            </form>
-            <div class="acc">
-                <div class="write" id="write">
-                    <i class="bi bi-pencil-square"></i>
-                    <span>Write...</span>
-                </div>
-                <div class="user" onclick="toggleMenu()">
-                    <i class="bi bi-person-circle" id="online-user" itemid="profile"></i>
-                </div>
-            </div>
-            <div class="sub-menu-wrap" id="subMenu">
-                <div class="sub-menu">
-                    <div class="user-information">
-                        <i class="bi bi-person-circle" id="online-user" itemid="profile"></i>
-                        <h2 id="user-name"></h2>
-                    </div>
-                    <hr>
-
-                    main
-                        <i class="bi bi-person" onclick="profile"></i>
-                        <p>Profile</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="sub-menu-link">
-                        <i class="bi bi-bookmarks"></i>
-                        <p>Library</p>
-                        <span>></span>
-                    </a>
-                    <a href="" class="sub-menu-link">
-                        <i class="bi bi-journals"></i>
-                        <p>Story</p>
-                        <span>></span>
-                    </a>
-                    <a href="./html/register.html" class="sub-menu-link" onclick="signOut()">
-                        <p>Sign out</p>
-                        <span>></span>
-                    </a>
-
-                </div>
-            </div>
+    <div class="container">
+        <div class="header">
+            <img src="./src/logo0.png" alt="">
+            <span>Nasiye</span>
+            <button onclick="start()">Biloow</button>
         </div>
         <hr>
-        <div class="classic" id="classic"></div>
-       
+        <div class="content">
+            <h1>Hey!<br> kaalay <br>aan nasannee</h1>
+
+            <p>Ka aqriso, kuna qor, kana dhis maankaaga!!</p>
+            <button onclick="start()" class="st">Biloow</button>
+        </div>
+
+        <footer class="footer">
+            <div class="links">
+                <a href="">About</a>
+                <a href="">Help</a>
+                <a href="">Terms</a>
+                <a href="">Privacy</a>
+            </div>
+        </footer>
     </div>
-
-
-   
-    <script src="./js/main.js"></script>
     
+
+
+    <script>
+        function start() {
+            window.location.href = "./html/register.html"
+        }
+    </script>
+
 </body>
 
 </html>

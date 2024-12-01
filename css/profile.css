@@ -63,7 +63,6 @@
     font-size: 1.3rem;
     color: rgb(35, 5, 61);
 }
-
 .sub-menu-wrap {
     width: 320px;
     position: absolute;
@@ -72,7 +71,8 @@
     color: black;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.5s;
+    transition: max-height 0.8s;
+    /* background-color: rgb(255, 253, 229); */
 }
 
 .sub-menu-wrap.open-menu {
@@ -80,20 +80,26 @@
 }
 
 .sub-menu {
-    background-color: rgb(251, 251, 252);
+    background-color: rgb(255, 253, 229);
+    /* background-color: rgb(251, 251, 252); */
     padding: 20px;
     margin: 10px;
-    color: black;
+    color: rgb(35, 5, 61);
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .user-information {
     display: flex;
     align-items: center;
+    background-color: rgb(255, 253, 229);
+}
+
+.user-information i {
+    background-color: rgb(255, 253, 229);
 }
 
 .user-information #user-name {
-
+    background-color: rgb(255, 253, 229);
     padding: 10px;
 
 }
@@ -109,24 +115,28 @@
 .sub-menu-link {
     display: flex;
     align-items: center;
-    color: rgb(18, 18, 69);
+    color: rgb(35, 5, 61);
     margin-right: 30px;
     text-decoration: none;
+    background-color: rgb(255, 253, 229);
 }
 
 .sub-menu-link p {
     width: 100%;
+    background-color: rgb(255, 253, 229);
 }
 
 .sub-menu-link i {
     padding: 10px;
-    color: rgba(18, 18, 69, 1);
+    color: rgb(29, 4, 50);
+    background-color: rgb(255, 253, 229);
 }
 
 .sub-menu-link span {
     font-size: 15px;
     /* font-weight: 900; */
     transition: transform 0.5s;
+    background-color: rgb(255, 253, 229);
 }
 
 .sub-menu-link span:hover {
@@ -136,7 +146,6 @@
 .sub-menu-link p:hover {
     font-weight: 600px;
 }
-
 hr {
     width: 100%;
     border: 1px solid rgb(18, 18, 69);

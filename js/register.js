@@ -58,7 +58,7 @@ function store(){
         if (existingUser) {
 
             localStorage.setItem('onlineUser', JSON.stringify(existingUser))
-            window.location.href = '../index.html'
+            window.location.href = '../html/first.html'
 
         } else {
             alert('Emailka ama password ka iska hubi');
@@ -130,5 +130,5 @@ const sign = document.getElementById('sign-in-google')
 
 cancel.addEventListener('click', close)
 function close() {
-    window.location.href = "first.html"
+    window.location.href = "../index.html"
 }

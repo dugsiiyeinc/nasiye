@@ -10,6 +10,7 @@
 .container {
     width: 100%;
     /* background-color: rgb(241, 251, 255); */
+    background-color: rgba(255, 253, 229,0.2);
 }
 
 .container .nav {
@@ -120,6 +121,7 @@ textarea {
     line-height: 32px;
     background-color: rgb(241, 251, 255);
     color: rgb(0, 0, 0);
+    padding: 30px;
 
 }
 
@@ -143,7 +145,7 @@ textarea::-webkit-scrollbar {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 50px;
+    gap: 30px;
     padding: 0px;
     cursor: pointer;
 }
@@ -172,7 +174,121 @@ span {
 span {
     padding: 3px;
 }
+@media (max-width: 1024) {
+    .container {
+        width: 100%;
+        /* background-color: rgb(241, 251, 255); */
+    }
 
+    .container nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brands span {
+        font-family: "Sacramento", sans-serif;
+        font-size: 2rem;
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .article {
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .article h1 {
+        font-size: 1.5rem;
+        /* padding: 20px; */
+        align-items: center;
+    }
+
+
+    textarea {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        font-size: 1rem;
+        color: rgb(50, 51, 60);
+        resize: none;
+        outline: none;
+        line-height: 32px;
+        background-color: rgb(241, 251, 255);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+
+    }
+
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+        /* background-color: rgb(241, 251, 255); */
+    }
+
+    .container nav {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .brands span {
+        font-family: "Sacramento", sans-serif;
+        font-size: 2rem;
+        padding: 20px;
+        margin-left: 0;
+    }
+
+    .search {
+        display: none;
+    }
+
+    .article {
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .article h1 {
+        font-size: 1.5rem;
+        /* padding: 20px; */
+        align-items: center;
+    }
+
+
+    textarea {
+        width: 100vw;
+        height: 100vh;
+        border: none;
+        font-size: 1rem;
+        color: rgb(50, 51, 60);
+        resize: none;
+        outline: none;
+        line-height: 32px;
+        background-color: rgb(241, 251, 255);
+        color: rgb(0, 0, 0);
+        padding: 10px;
+
+    }
+
+}
 
 @media (max-width: 376px) {
     .container {
@@ -200,17 +316,15 @@ span {
 
     .article {
         width: 100%;
-        margin-top: 20px;
+        margin-top: 5px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
-        /* padding: c; */
+        gap: 10px;
     }
 
     .article h1 {
-        
         font-size: 1.5rem;
         /* padding: 20px; */
         align-items: center;
@@ -218,7 +332,7 @@ span {
 
 
     textarea {
-        width: 900px;
+        width: 100vw;
         height: 100vh;
         border: none;
         font-size: 1rem;
@@ -228,6 +342,7 @@ span {
         line-height: 32px;
         background-color: rgb(241, 251, 255);
         color: rgb(0, 0, 0);
+        padding: 10px;
 
     }
 

@@ -12,7 +12,7 @@ const user = document.getElementById('user-name')
 // all about writing and going the page that allows users to write everything they want
 
 function goPage() {
-    window.location.href = "./html/write.html"
+    window.location.href = "../html/write.html"
 }
 write.addEventListener('click', goPage)
 let writtens = getlocalData() || []
@@ -20,14 +20,14 @@ let writtens = getlocalData() || []
 function userData() {
     const userData = JSON.parse(localStorage.getItem('onlineUser'))
     const userName = userData.userName
-    
+
     user.textContent = userName
     // user.classList.add('user-information')
     console.log(userName)
     toggleMenu()
 }
 let subMenu = document.getElementById('subMenu')
-function toggleMenu(){
+function toggleMenu() {
     subMenu.classList.toggle("open-menu");
 
 }
@@ -40,7 +40,7 @@ search.addEventListener('input', (e) => {
     console.log(value)
     const filteredData = writtens.filter(written => {
         return written.title.toLowerCase().includes(value) || written.desc.toLowerCase().includes(value)
-        
+
     })
     addTaskToDom(filteredData)
 })
@@ -50,7 +50,7 @@ function addTaskToDom(filteredData) {
     let Writtens = filteredData || writtens
     console.log(Writtens)
 
-
+    getImageLink()
     adding.innerHTML = ''
     for (let write of Writtens) {
         // console.log(write.xog)
@@ -71,12 +71,12 @@ function addTaskToDom(filteredData) {
                 <div class="additional">
                     <span id="date"></span>
                     <div class="like">
-                        <i class="bi bi-hand-thumbs-up-fill" style="color:blue"></i>
-                        <span id="count">456</span>
+                        <i class="bi bi-hand-thumbs-up-fill" ></i>
+                        <span id="count"></span>
                     </div>
                     <div class="comment">
                         <i class="bi bi-chat-fill"></i>
-                        <span id="comment-counter">45</span>
+                        <span id="comment-counter"></span>
                     </div>
                 </div>
             </div>
@@ -102,7 +102,7 @@ function addTaskToDom(filteredData) {
 
                 // console.log(info.id)
                 // localStorage.setItem('articleId',)
-                window.location.href = `./html/read.html?id=${findIndex.id}`
+                window.location.href = `../html/read.html?id=${findIndex.id}`
 
             }
         }
@@ -141,21 +141,26 @@ userAcount.addEventListener('click', function () {
 })
 
 
-
+document.addEventListener('DOMContentLoaded', (e) => {
+    e.preventDefault
+    addTaskToDom()
+})
 
 function getlocalData() {
     const localDate = JSON.parse(localStorage.getItem('info')) || [];
     return localDate;
     // console.log(localDate)
 }
-document.addEventListener('DOMContentLoaded', (e) => {
-    e.preventDefault
-    addTaskToDom()
-})
+
+function getImageLink() {
+    const imageLinkData = JSON.parse(localStorage.getItem('links'))
+    // return imageLinkData
+    console.log(imageLinkData)
+
+}
 
 
-
-function signOut(){
+function signOut() {
     const localDate = JSON.parse(localStorage.getItem('onlineUser')) || [];
     // localStorage.removeItem("onlineUser")
     console.log(localDate)

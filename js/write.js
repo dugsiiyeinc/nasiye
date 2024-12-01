@@ -5,19 +5,43 @@ const pdesc = document.getElementById('desc')
 const pxogo = document.getElementById('text-area') 
 const publish = document.getElementById('publish')
 const contentImage = document.getElementById('content-image')
+const acountUser = document.getElementById('online-user')
+const user = document.getElementById('user-name')
 
 
+function userData() {
+    const userData = JSON.parse(localStorage.getItem('onlineUser'))
+    const userName = userData.userName
+
+
+    user.textContent = userName
+    // user.classList.add('user-information')
+    console.log(userName)
+    // toggleMenu()
+}
+let subMenu = document.getElementById('subMenu')
+function toggleMenu() {
+    subMenu.classList.toggle("open-menu");
+
+}
+acountUser.addEventListener('click', function () {
+    userData()
+    toggleMenu()
+
+})
 
 function write() {
+    const userData = JSON.parse(localStorage.getItem('onlineUser'))
+    const userName = userData.userName
     let info = {
         id: Date.now(), 
         title: ptitle.value,
         desc: pdesc.value,
         xog: pxogo.value,
-        // outhor:onlineUser.username
+        outhor: userName
         // photo: contentImage.getAttribute(src)
     }
-    // console.log(info)
+    console.log(info.outhor)
 
     
     const article = getlocalData()
